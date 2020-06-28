@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        font: 400 15px/1.8 Lato, sans-serif;
+        color: #777;
+      }
+      h3,
+      h4 {
+        margin: 10px 0 30px 0;
+        letter-spacing: 10px;
+        font-size: 20px;
+        color: #111;
+      }
+      .container {
+        padding: 80px 120px;
+      }
+      .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        height: 50%;
+        margin: auto;
+      }
+      .bg-1 {
+        background: #2d2d30;
+        color: #bdbdbd;
+      }
+      .bg-1 h3 {
+        color: #fff;
+      }
+      .bg-1 p {
+        font-style: italic;
+      }
+      .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+      .list-group-item:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+      }
+      .thumbnail p {
+        margin-top: 15px;
+        color: #555;
+      }
+      .btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #f1f1f1;
+        border-radius: 0;
+        transition: 0.2s;
+      }
+      .btn:hover,
+      .btn:focus {
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #000;
+      }
+      .nav-tabs li a {
+        color: #777;
+      }
+      .navbar {
+        font-family: Montserrat, sans-serif;
+        margin-bottom: 0;
+        background-color: #2d2d30;
+        border: 0;
+        font-size: 11px !important;
+        letter-spacing: 4px;
+        opacity: 1;
+      }
+      .navbar li a,
+      .navbar .navbar-brand {
+        color: #d5d5d5 !important;
+      }
+      .navbar-nav li a:hover {
+        color: #fff !important;
+      }
+      .navbar-nav li.active a {
+        color: #fff !important;
+        background-color: #29292c !important;
+      }
+      .navbar-default .navbar-toggle {
+        border-color: transparent;
+      }
+      footer {
+        background-color: #2d2d30;
+        color: #f5f5f5;
+        padding: 32px;
+      }
+      footer a {
+        color: #f5f5f5;
+      }
+      footer a:hover {
+        color: #777;
+        text-decoration: none;
+      }
+      .form-control {
+        border-radius: 0;
+      }
+      textarea {
+        resize: none;
+      }
+      .login-form form {
+        margin-bottom: 15px;
+        background: #ffffff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+      }
+      .login-form .hint-text {
+        color: #777;
+        padding-bottom: 15px;
+        text-align: center;
+      }
+      .form-control,
+      .btn {
+        min-height: 38px;
+        border-radius: 2px;
+      }
+      .login-btn {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .or-seperator {
+        margin: 20px 0 10px;
+        text-align: center;
+        border-top: 1px solid #ccc;
+      }
+      .or-seperator i {
+        padding: 0 10px;
+        background: #f7f7f7;
+        position: relative;
+        top: -11px;
+        z-index: 1;
+      }
+      .social-btn .btn {
+        margin: 10px 0;
+        font-size: 15px;
+        text-align: left;
+        line-height: 24px;
+      }
+      .social-btn .btn i {
+        float: left;
+        margin: 4px 15px 0 5px;
+        min-width: 15px;
+      }
+      .input-group-addon .fa {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#myPage">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#" data-toggle="modal" data-target="#loginmodal"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a href="#" data-toggle="modal" data-target="#signupmodal"
+                >Signup</a
+              >
+            </li>
+            <li><a href="#tour">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="modal fade"
+      id="loginmodal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header text-center">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h1
+              class="modal-title w-100 dark-grey-text font-weight-bold my-3"
+              id="myModalLabel"
+            >
+              <strong>Sign in</strong>
+            </h1>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+            <div class="login-form">
+              <form action="/examples/actions/confirmation.php" method="post">
+                <div class="text-center social-btn">
+                  <a href="#" class="btn btn-primary btn-block"
+                    ><i class="fa fa-facebook"></i> Sign in with
+                    <b>Facebook</b></a
+                  >
+                  <a href="#" class="btn btn-info btn-block"
+                    ><i class="fa fa-twitter"></i> Sign in with
+                    <b>Twitter</b></a
+                  >
+                  <a href="#" class="btn btn-danger btn-block"
+                    ><i class="fa fa-google"></i> Sign in with <b>Google</b></a
+                  >
+                </div>
+                <div class="or-seperator"><i>or</i></div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"
+                      ><i class="fa fa-user"></i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      placeholder="Username"
+                      required="required"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"
+                      ><i class="fa fa-lock"></i
+                    ></span>
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      placeholder="Password"
+                      required="required"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-block login-btn"
+                  >
+                    Sign in
+                  </button>
+                </div>
+                <div class="clearfix">
+                  <!-- <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>-->
+                  <a href="#" class="pull-left grey-text">Forgot Password?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <p
+              class="font-small grey-text d-flex justify-content-end text-center"
+            >
+              Not a member? <a href="#" class="blue-text ml-1"> Sign Up</a>
+            </p>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="signupmodal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h1
+              class="modal-title w-100 dark-grey-text font-weight-bold my-3"
+              id="myModalLabel"
+            >
+              <strong>Sign Up</strong>
+            </h1>
+          </div>
+          <div class="modal-body">
+            <div class="signup-form">
+              <form action="/examples/actions/confirmation.php" method="post">
+                <div class="social-btn text-center">
+                  <a href="#" class="btn btn-primary btn-lg"
+                    ><i class="fa fa-facebook"></i> Facebook</a
+                  >
+                  <a href="#" class="btn btn-info btn-lg"
+                    ><i class="fa fa-twitter"></i> Twitter</a
+                  >
+                  <a href="#" class="btn btn-danger btn-lg"
+                    ><i class="fa fa-google"></i> Google</a
+                  >
+                </div>
+                <div class="or-seperator"><b>or</b></div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control input-lg"
+                    name="email"
+                    placeholder="Email Address"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control input-lg"
+                    name="fullname"
+                    placeholder="full name"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control input-lg"
+                    name="username"
+                    placeholder="Username"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control input-lg"
+                    name="password"
+                    placeholder="Password"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control input-lg"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group">
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-lg btn-block signup-btn"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="text-center">
+              Already have an account? <a href="#">Login here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "col">
+    <!-- Container (The Band Section) -->
+    <div class = "col-sm-7" style="margin-top: 80px " style="margin-left:50px" id="band">
+      <h3>Our Product Name</h3>
+      <p><em>Product Information</em></p>
+      <p>Real time Multiple Chat apllication</p>
+    </div>
+    <!-- Form Section-->
+    
+    <div class="row justify-content-center" style="margin-top: 80px">
+      <div class="col-sm-5">
+      <div class="card">
+      <article class="card-body">
+      <form>
+        <div class="form-row">
+          <div class="col form-group">
+            <label>First name </label>   
+              <input type="text" class="form-control" placeholder="">
+          </div> <!-- form-group end.// -->
+          <div class="col form-group">
+            <label>Last name</label>
+              <input type="text" class="form-control" placeholder=" ">
+          </div> <!-- form-group end.// -->
+        </div> <!-- form-row end.// -->
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" class="form-control" placeholder="">
+          <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div> <!-- form-group end.// -->
+        <div class="form-group">
+            <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="option1">
+            <span class="form-check-label"> Male </span>
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="option2">
+            <span class="form-check-label"> Female</span>
+          </label>
+        </div> <!-- form-group end.// -->
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control">
+          </div> <!-- form-group end.// -->
+          <div class="form-group col-md-6">
+            <label>Country</label>
+            <select id="inputState" class="form-control">
+              <option> Choose...</option>
+                <option>Uzbekistan</option>
+                <option>Russia</option>
+                <option selected="">United States</option>
+                <option>India</option>
+                <option>Afganistan</option>
+            </select>
+          </div> <!-- form-group end.// -->
+        </div> <!-- form-row.// -->
+        <div class="form-group">
+          <label>Create password</label>
+            <input class="form-control" type="password">
+        </div> <!-- form-group end.// -->  
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block"> Register  </button>
+          </div> <!-- form-group// -->      
+          <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+      </form>
+      </article> <!-- card-body end .// -->
+      <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+      </div> <!-- card.// -->
+      </div> <!-- col.//-->
+      
+      </div>
+
+  </div>
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container">
+      <h3 class="text-center">Feedback</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <p>Developer Address</p>
+          <p>
+            <span class="glyphicon glyphicon-map-marker"></span> Bangalore,
+            India
+          </p>
+          <p>
+            <span class="glyphicon glyphicon-phone"></span> Phone: +91
+            1515151515
+          </p>
+          <p>
+            <span class="glyphicon glyphicon-envelope"></span> Email:
+            mail@mail.com
+          </p>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Name"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col-sm-6 form-group">
+              <input
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email"
+                type="email"
+                required
+              />
+            </div>
+          </div>
+          <textarea
+            class="form-control"
+            id="comments"
+            name="comments"
+            placeholder="Feedback"
+            rows="5"
+          ></textarea>
+          <br />
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <button class="btn pull-right" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+    <!-- Footer -->
+    <footer class="text-center">
+      <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Go to Top</p>
+    </footer>
+    <script>
+      $(document).ready(function () {
+        // Initialize Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              900,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+  </body>
+</html>
